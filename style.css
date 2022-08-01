@@ -1,0 +1,27 @@
+.books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  display: block;
+  padding: 15px;
+  margin: 15px;
+}
+
+#btn {
+  padding: 15px 30px;
+  margin: 15px;
+}
+
+#lists {
+  width: 50%;
+  padding: 0 15px;
+  list-style: none;
+}
+
+#lists li span {
+  border: 4px solid lightblue;
+  padding: 15px 20px;
+}
