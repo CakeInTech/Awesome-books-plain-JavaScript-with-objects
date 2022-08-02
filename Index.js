@@ -18,17 +18,7 @@ class Book {
 
 class UI {
   static displayBooks() {
-    const storedBooks = [
-      {
-        title: 'Book One',
-        author: 'John Doe',
-      },
-      {
-        title: 'Book Two',
-        author: 'Jane Doe',
-      },
-    ];
-    const books = storedBooks;
+    const books = Store.getBooks();
 
     books.forEach((book) => UI.addBookToList(book));
   }
@@ -73,8 +63,16 @@ class Store {
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
+  static removeBook(title) {
+    const books = Store.getBooks();
+    books.forEach((book, index) => {
+      if (book.title === title) {
+        books.splice(index, 1);
+      }
+    });
+    localStorage.setItem('books', JSON.stringify(books));
+  }
 
-  
 }
 
 // Events  : Display books
@@ -92,9 +90,11 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
     UI.addBookToList(book);
     UI.clearFields();
+    Store.addBook(book);
   }
   // Events  : Remove books
   document.getElementById('lists').addEventListener('click', (e) => {
-    UI.removeBook(e.target);
+    UI.deleteBook(e.target);
+    Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
   });
 });
