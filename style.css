@@ -30,7 +30,6 @@ td {
   font-size: 13px;
 }
 
-
 tr {
   border: 1px solid rgba(114, 107, 107, 0.247);
 }
@@ -57,7 +56,6 @@ input {
   padding: 5px 30px;
   margin: 15px;
   width: fit-content;
-
 }
 
 #lists {
@@ -73,7 +71,7 @@ input {
 
 .delete {
   text-decoration: none;
-  font-weight: 400; 
+  font-weight: 400;
   border: 2px solid #303030;
   padding: 4px;
   color: #303030;
