@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Awesome Books</title>
   </head>
 
   <body>
     <div class="books" id="books">
       <h1>Awesome Books</h1>
-      <ul id="lists"></ul>
-      <form>
+      <table>
+        <tr>
+          <th><h2>Title</h2></th>
+          <th><h2>Author</h2></th>
+          <th></th>
+        </tr>
+        <tbody id="lists"></tbody>
+      </table>
+      <form id="form" class="form">
         <input
           type="text"
           name="author"
