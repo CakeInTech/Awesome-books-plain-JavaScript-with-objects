@@ -1,25 +1,14 @@
-// const list = document.getElementById('lists');
-// const form = document.querySelector('form');
-// const author = document.getElementById('atr');
-// const title = document.getElementById('ttl');
-
-// const bookCollection = [];
-
-// Book class
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-use-before-define */
+/* eslint-disable max-classes-per-file */
 class Book {
   constructor(author, title) {
     this.author = author;
     this.title = title;
   }
 }
-
-// UI class : handle the visuals
-
 class UI {
   static displayBooks() {
     const books = Store.getBooks();
-
     books.forEach((book) => UI.addBookToList(book));
   }
 
@@ -27,10 +16,10 @@ class UI {
     const list = document.getElementById('lists');
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${book.title} </td>
-      <td>${book.author}</td>
-      <td><a href="#" class="delete">Remove</a></td>
-    `;
+    <td>${book.title} </td>
+    <td>${book.author}</td>
+    <td><a href='#' class='delete'>Remove</a></td>
+  `;
     list.appendChild(row);
   }
 
@@ -45,8 +34,6 @@ class UI {
     document.getElementById('ttl').value = '';
   }
 }
-
-// storage class : handle local storage
 class Store {
   static getBooks() {
     let books;
@@ -63,6 +50,7 @@ class Store {
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
+
   static removeBook(title) {
     const books = Store.getBooks();
     books.forEach((book, index) => {
@@ -72,14 +60,11 @@ class Store {
     });
     localStorage.setItem('books', JSON.stringify(books));
   }
-
 }
 
-// Events  : Display books
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
-// Events  : Add books
-document.querySelector('form').addEventListener('submit', (e) => {
+document.querySelector('#form').addEventListener('submit', (e) => {
   e.preventDefault();
   const author = document.getElementById('atr').value;
   const title = document.getElementById('ttl').value;
@@ -89,12 +74,11 @@ document.querySelector('form').addEventListener('submit', (e) => {
     const book = new Book(author, title);
 
     UI.addBookToList(book);
-    UI.clearFields();
     Store.addBook(book);
+    UI.clearFields();
   }
-  // Events  : Remove books
-  document.getElementById('lists').addEventListener('click', (e) => {
-    UI.deleteBook(e.target);
-    Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
-  });
+});
+document.getElementById('lists').addEventListener('click', (e) => {
+  UI.deleteBook(e.target);
+  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });
