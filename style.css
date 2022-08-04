@@ -1,7 +1,49 @@
 .books {
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: sans-serif;
+  background: url(images/44eb167435e0727bcffe99f9c4e3e7aa.jpg);
+}
+
+table {
+  border-collapse: collapse;
+  border: 3px solid #506072;
+  margin: 0 20px;
+}
+
+th {
+  background-color: #506072;
+  color: #fff;
+  text-align: left;
+  padding: 8px;
+}
+
+th h2 {
+  margin: 0;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+  font-size: 13px;
+}
+
+tr {
+  border: 1px solid rgba(114, 107, 107, 0.247);
+}
+
+tr:hover {
+  background-color: #689cbe;
+  color: white;
+  transition: 1s;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 input {
@@ -11,8 +53,9 @@ input {
 }
 
 #btn {
-  padding: 15px 30px;
+  padding: 5px 30px;
   margin: 15px;
+  width: fit-content;
 }
 
 #lists {
@@ -24,4 +67,12 @@ input {
 #lists li span {
   border: 4px solid lightblue;
   padding: 15px 20px;
+}
+
+.delete {
+  text-decoration: none;
+  font-weight: 400;
+  border: 2px solid #303030;
+  padding: 4px;
+  color: #303030;
 }
