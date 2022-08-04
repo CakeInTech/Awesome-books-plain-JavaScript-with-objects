@@ -1,13 +1,73 @@
+* {
+  margin: 0;
+}
+
+.main{
+  background: url(images/Banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.navigation {
+  background-color: #0061B2;
+  backdrop-filter: blur(7px);
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  padding: 0 16px;
+}
+
+.logo {
+  margin: 0;
+}
+
+.logo a {
+  color: #8FE3CF;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #dae6ff;
+  padding-bottom: 5px;
+}
+
+.nav a:hover {
+  border-bottom: 4px solid #dae6ff;
+  border-radius: 2px;
+  
+}
+
 .books {
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: sans-serif;
-  background: url(images/44eb167435e0727bcffe99f9c4e3e7aa.jpg);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 table {
+  display: none;
   border-collapse: collapse;
   border: 3px solid #506072;
   margin: 0 20px;
@@ -43,7 +103,7 @@ tr:hover {
 .form {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 input {
@@ -75,4 +135,34 @@ input {
   border: 2px solid #303030;
   padding: 4px;
   color: #303030;
+}
+
+.notvisible {
+ display: none;
+}
+
+.addbook {
+  display: none;
+  flex-direction: column; 
+  align-items: center;
+  height: 350px;
+  width: 350px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(223, 156, 250, 0.397);
+  backdrop-filter: blur(7px);
+  width: 350px;
+  height: 350px;
+  border-radius: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
