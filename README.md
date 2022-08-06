@@ -18,23 +18,17 @@
 ## Getting Started
 
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
+clone the project by using terminal: 
+
+`git clone git@github.com:MohamedCK/Awesome-books-plain-JavaScript-with-objects.git`
+
 ### prerequisites
-
+- Javascript
 ### setup
-
-### Install 
-
-### Usage
-
-### Run tests
-
-### Deployment
+- clone or download this repo on your machine.
+- Enter the project directory,
 
 ## Authors
 
