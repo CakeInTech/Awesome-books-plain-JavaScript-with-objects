@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-.main{
+.main {
   background: url(images/Banner.jpg);
   background-size: cover;
   background-position: center;
@@ -14,10 +14,8 @@
   justify-content: center;
 }
 
-
-
 .navigation {
-  background-color: #0061B2;
+  background-color: #0061b2;
   backdrop-filter: blur(7px);
   line-height: 50px;
   display: flex;
@@ -31,7 +29,7 @@
 }
 
 .logo a {
-  color: #8FE3CF;
+  color: #8fe3cf;
   text-decoration: none;
 }
 
@@ -50,7 +48,6 @@
 .nav a:hover {
   border-bottom: 4px solid #dae6ff;
   border-radius: 2px;
-  
 }
 
 .books {
@@ -64,6 +61,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 table {
@@ -91,7 +89,14 @@ td {
 }
 
 tr {
+  display: flex;
+  width: 380px;
+  gap: 50px;
   border: 1px solid rgba(114, 107, 107, 0.247);
+}
+
+tbody {
+  width: 100%;
 }
 
 tr:hover {
@@ -139,7 +144,7 @@ input {
 
 .addbook {
   display: none;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   height: 350px;
   width: 350px;
@@ -161,4 +166,9 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
 }
