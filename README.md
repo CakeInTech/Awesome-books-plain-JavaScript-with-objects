@@ -15,6 +15,21 @@
 
 [Live Demo Link](https://livedemo.com)
 
+## Getting Started
+
+
+To get a local copy up and running follow these simple example steps.
+
+clone the project by using terminal: 
+
+`git clone git@github.com:MohamedCK/Awesome-books-plain-JavaScript-with-objects.git`
+
+### prerequisites
+- Javascript
+### setup
+- clone or download this repo on your machine.
+- Enter the project directory,
+
 ## Authors
 
 👤 **Mohamed Abdulhakim**
